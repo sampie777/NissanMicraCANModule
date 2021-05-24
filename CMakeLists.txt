@@ -30,4 +30,4 @@ add_custom_target(
     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
-add_executable(Z_DUMMY_TARGET ${SRC_LIST} src/ID_sniffer.cpp src/ID_sniffer.h src/CAN_Message.h)
+add_executable(Z_DUMMY_TARGET ${SRC_LIST} src/ID_sniffer.cpp src/ID_sniffer.h src/CAN_Message.h src/Message_sniffer.cpp src/Message_sniffer.h)

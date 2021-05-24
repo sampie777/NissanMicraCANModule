@@ -7,14 +7,14 @@
 
 #include <Arduino.h>
 #include "CAN_Message.h"
-#define MAX_ID_COUNT 255
+#define MAX_ID_COUNT 128
 
 class ID_sniffer {
 public:
     bool processMessage(const CAN_Message * message);
-    bool hasMessageId(uint16_t id);
+    bool hasMessageId(unsigned long id);
 
-    uint16_t ids[MAX_ID_COUNT] = {0};
+    unsigned long ids[MAX_ID_COUNT] = {0};
     uint16_t id_pointer = 0;
 };
 

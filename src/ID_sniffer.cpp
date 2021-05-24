@@ -18,7 +18,7 @@ bool ID_sniffer::processMessage(const CAN_Message * message) {
     return true;
 }
 
-bool ID_sniffer::hasMessageId(uint16_t id) {
+bool ID_sniffer::hasMessageId(unsigned long id) {
     for (uint16_t i = 0; i < id_pointer; i++) {
         if (ids[i] == id) {
             return true;

@@ -9,12 +9,14 @@
 
 class CAN_Message {
 public:
-    CAN_Message(uint16_t id, uint8_t len, const uint8_t *rxBuf) : id(id), len(len) {
+    CAN_Message(unsigned long id, uint8_t len, const uint8_t *rxBuf) : id(id), len(len) {
         memcpy(this->rxBuf, rxBuf, sizeof(this->rxBuf));
-    };
+    }
 
-    uint16_t id;
-    uint8_t len;
+    CAN_Message() = default;
+
+    unsigned long id = 0;
+    uint8_t len = 0;
     uint8_t rxBuf[8] = {0};
 };
 
